@@ -28,7 +28,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/Foto13.JPG") center / cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/Foto13.jpg") center / cover no-repeat;
   z-index: -1;
   filter: grayscale(1) blur(1.5px);
 }
