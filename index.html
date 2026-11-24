@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Undangan Pernikahan</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- 1. SAMPUL -->
+    <section id="hero" class="hero vh-100 w-100 p-3 d-flex justify-content-center text-center text-white">
+      <main class="sampul-isi">
+
+        <div class="sampul-atas">
+          <h5>The Wedding Of</h5>
+          <h1>Aulia &amp; Fardin</h1>
+        </div>
+
+        <div class="sampul-bawah">
+          <h4>Kepada Yth.</h4>
+          <h5>Bapak/Ibu/Saudara/i</h5>
+          <p id="namaTamu">Tamu Undangan</p>
+          <button id="btnBuka" class="btn mt-4">Buka Undangan</button>
+        </div>
+
+      </main>
+    </section>
+
+    <!-- ISI UNDANGAN -->
+    <section id="undangan" class="d-none py-5 text-center">
+      <div class="container">
+        <div id="pembuka">
+          <h5 class="reveal">The Wedding Of</h5>
+          <img src="img/Foto3.jpg" alt="Nama &amp; Nama" class="img-fluid my-4 reveal zoom">
+          <h2 class="reveal">Aulia &amp; Fardin</h2>
+          <p class="mt-4 reveal">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
+        </div>
+
+        <hr class="garis my-5">
+
+        <!-- 3. MEMPELAI -->
+        <div id="mempelai" class="mt-5">
+          <h3 class="reveal mb-4">Mempelai</h3>
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 reveal dari-kiri">
+              <div class="card card-samping mb-4">
+                <img id="mempelai1" src="img/MempelaiP.jpg" class="card-img-top" alt="Nama Mempelai 1">
+                <div class="card-body">
+                  <h5 class="card-title">Aulia Pratiwi</h5>
+                  <p class="card-text">Putri dari <span class="ortu">Bapak  Alm. M.zakir, A. Md</span> 
+                    <span class="dan">&amp;</span>Ibu Irawati Azis Kasua</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-10 col-lg-8 reveal dari-kanan">
+              <div class="card card-samping kebalik mb-4">
+                <img id="mempelai2" src="img/MempelaiL.jpg" class="card-img-top" alt="Nama Mempelai 2">
+                <div class="card-body">
+                  <h5 class="card-title">Muh. Fardin Iqbal</h5>
+                  <p class="card-text">Putra dari <span class="ortu">Bapak Muhammad Iqbal </span>
+                    <span class="dan">&amp;</span> Ibu Hj. Najemia Nur Macakka</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="garis my-5">
+
+        <!-- 4. ACARA & LOKASI -->
+        <div id="lokasi" class="mt-5">
+          <h4 class="reveal">SAVE THE DATE</h4>
+          <h3 class="reveal">Senin, 7 Desember 2026</h3>
+          <div class="row justify-content-center mt-4">
+            <div class="col-md-6 col-lg-4 reveal dari-kiri">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Akad Nikah</h5>
+                  <p class="card-text">Pukul 10.00 WIB</p>
+                  <p class="card-text">(KEDIAMAN MEMPELAI WANITA)</p>
+                  <p class="card-text">Jalan Kelapa No. 61 A, Kota Palopo</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal dari-kanan">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Resepsi</h5>
+                  <p class="card-text">Pukul 12.00 WIB</p>
+                  <p class="card-text">(KEDIAMAN MEMPELAI WANITA)</p>
+                  <p class="card-text">Jalan Kelapa No. 61 A, Kota Palopo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="https://maps.app.goo.gl/AQX9HUR99tFM2Ms5A?g_st=iw" target="_blank" class="btn mt-3 reveal">Lihat Lokasi</a>
+        </div>
+
+        <hr class="garis my-5">
+
+        <!-- 5. GALERI -->
+        <div id="galeri" class="mt-5">
+          <h3 class="reveal mb-4">Galeri</h3>
+          <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-4 reveal zoom"><img src="img/Foto1.jpg" alt="Galeri 1"></div>
+            <div class="col-6 col-md-4 reveal zoom"><img src="img/Foto4.jpg" alt="Galeri 2"></div>
+            <div class="col-12 reveal zoom galeri-landscape"><img src="img/Foto11.JPG" alt="Galeri 3"></div>
+            <div class="col-6 col-md-4 reveal zoom"><img src="img/Foto5.jpg" alt="Galeri 4"></div>
+            <div class="col-6 col-md-4 reveal zoom"><img src="img/Foto12.JPG" alt="Galeri 5"></div>
+          </div>
+        </div>
+
+        <hr class="garis my-5">
+
+        <!-- RSVP -->
+        <div id="rsvp" class="mt-5">
+          <h3 class="reveal">RSVP</h3>
+          <p class="reveal">Mohon konfirmasi kehadiran Bapak/Ibu/Saudara/i.</p>
+          <form id="formRsvp" class="row justify-content-center reveal" novalidate>
+            <div class="col-12 col-md-8 col-lg-6 text-start">
+              <label for="rsvpNama" class="form-label">Nama</label>
+              <input type="text" id="rsvpNama" class="form-control mb-3" placeholder="Nama Anda" required>
+
+              <label for="rsvpHadir" class="form-label">Kehadiran</label>
+              <select id="rsvpHadir" class="form-select mb-3" required>
+                <option value="" selected disabled>Pilih konfirmasi</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak Hadir">Tidak Hadir</option>
+                <option value="Masih Ragu">Masih Ragu</option>
+              </select>
+
+              <label for="rsvpJumlah" class="form-label">Jumlah tamu</label>
+              <input type="number" id="rsvpJumlah" class="form-control mb-3" min="1" max="10" value="1">
+
+              <label for="rsvpUcapan" class="form-label">Ucapan dan doa</label>
+              <textarea id="rsvpUcapan" class="form-control mb-3" rows="3" placeholder="Tulis ucapan untuk mempelai"></textarea>
+
+              <p id="rsvpPesan" class="text-danger small d-none">Mohon isi nama dan pilih kehadiran.</p>
+              <div class="text-center">
+                <button type="submit" class="btn btn-emas">Kirim via WhatsApp</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <hr class="garis my-5">
+
+        <!-- AMPLOP DIGITAL -->
+        <div id="amplop" class="mt-5">
+          <h3 class="reveal">Amplop Digital</h3>
+          <p class="reveal">Doa restu Anda adalah hadiah terbaik bagi kami. Namun jika ingin memberikan tanda kasih, dapat melalui:</p>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-5 reveal dari-kiri">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Bank BSI</h5>
+                  <p class="card-text no-rek" id="rek1">7335164223</p>
+                  <p class="card-text">a.n. Aulia Pratiwi</p>
+                  <button type="button" class="btn btn-emas btn-salin" data-salin="rek1">Salin Nomor</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal zoom mt-2">
+            <h5 class="card-title qris-judul">QRIS</h5>
+            <img id="qris" src="img/qris.png" alt="QRIS" class="img-fluid">
+            <p class="small mt-2">Scan dengan aplikasi bank atau e-wallet</p>
+          </div>
+        </div>
+
+        <hr class="garis my-5">
+
+        <!-- 6. PENUTUP -->
+        <div id="penutup" class="mt-5">
+          <p class="reveal">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+          <p class="mt-4 reveal">Kami yang berbahagia,</p>
+          <h2 class="reveal">Aulia &amp; Fardin</h2>
+        </div>
+
+      </div>
+    </section>
+
+    <audio id="lagu" src="audio/musik.mp3"></audio>
+
+    <button id="btnMute" class="d-none" aria-label="Mute musik">
+      <span class="disk"></span>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,503 @@
+:root {
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --emas: #c9a96e;
+  --emas-tua: #b8924f;
+  --teks: #3b3b3b;
+  --burgundy: #5C0A1E;
+  --krem: #f7f1e8;
+}
+
+body {
+  font-family: "Cormorant SC", serif;
+  background-color: var(--burgundy);
+}
+
+/* ===================== SAMPUL ===================== */
+.hero {
+  position: fixed;          /* menutupi layar, di atas isi undangan */
+  top: 0;
+  left: 0;
+  z-index: 10;
+  isolation: isolate;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/Foto13.JPG") center / cover no-repeat;
+  z-index: -1;
+  filter: grayscale(1) blur(1.5px);
+}
+
+.hero.keluar {
+  transform: translateY(-100%);
+}
+
+.sampul-isi {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 30px 0;   
+}  
+
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
+  text-shadow: var(--shadow);
+}
+
+.hero h5 {
+  letter-spacing: 5px;
+  font-family: "Cormorant SC", serif;
+  font-size: 3rem;
+  text-shadow: var(--shadow);
+}
+
+.hero h4 {
+  font-family: "Cormorant SC", serif;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  text-shadow: var(--shadow);
+}
+
+.hero p {
+  font-size: 1.6rem;
+  text-shadow: var(--shadow);
+}
+
+.hero .btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 9px 29px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #fff;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+/* ukuran teks sampul bawah */
+.hero .sampul-bawah h4 {
+  font-size: 1.5rem;     /* "Kepada Yth." */
+}
+
+.hero .sampul-bawah h5 {
+  font-size: 1.5rem;     /* "Bapak/Ibu/Saudara/i" */
+}
+
+.hero .sampul-bawah p {
+  font-size: 1.8rem;     /* nama tamu */
+}
+
+.hero .sampul-bawah .btn {
+  font-size: 1rem;       /* tombol */
+  padding: 8px 26px;
+}
+
+/* ===================== ISI UNDANGAN ===================== */
+#undangan {
+  color: var(--krem);
+  min-height: 100vh;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#undangan.tampil {
+  opacity: 1;
+}
+
+#pembuka img {
+  width: min(168px, 53vw);
+  max-width: none;
+  height: auto;
+  aspect-ratio: 1 / 2;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 999px 999px 0 0;
+  outline: auto;
+  outline-color: white;
+  box-shadow: var(--shadow);
+}
+
+#undangan h5 {
+  letter-spacing: 5px;
+  font-family: "Cormorant SC", serif;
+  font-size: 3rem;
+  text-shadow: var(--shadow);
+}
+
+#undangan h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
+  text-shadow: var(--shadow);
+}
+
+#undangan h3 {
+  letter-spacing: 2px;
+  font-family: "Cormorant SC", serif;
+  font-size: 1.2rem;
+  text-shadow: var(--shadow);
+}
+
+#undangan p {
+  font-size: 1.2rem;
+  text-shadow: var(--shadow);
+}
+
+.garis {
+  width: 80px;
+  margin: 2rem auto;
+  border-top: 2px solid var(--emas);
+  opacity: 1;
+}
+
+/* ===================== KARTU (mempelai & acara) ===================== */
+#undangan .card {
+  color: var(--teks); 
+  background-color: #fffdf9;
+  border: 1px solid rgba(201, 169, 110, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#undangan .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+#undangan .card-body {
+  padding: 1.5rem 1.2rem;
+}
+
+#undangan .card-title {
+  font-family: "Cormorant SC", serif;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  color: var(--emas-tua);
+  text-shadow: none;
+  margin-bottom: 0.8rem;
+}
+
+#undangan .card-text {
+  font-size: 1.1rem;
+  text-shadow: none;
+  margin-bottom: 0.4rem;
+}
+
+/* ===================== MEMPELAI ===================== */
+#mempelai .card-samping {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem;
+}
+
+#mempelai .card-samping.kebalik {
+  flex-direction: row-reverse;
+}
+
+#mempelai .card-img-top {
+  flex: 0 0 auto;
+  display: block;
+  width: 170px;
+  height: 220px;
+  margin: 0;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 85px 85px 0 0;
+  outline: none;
+  border: 4px solid var(--emas);
+  box-shadow: var(--shadow);
+}
+
+#mempelai .card-samping .card-body {
+  flex: 1;
+  padding: 0;
+  text-align: left;
+}
+
+#mempelai .card-samping.kebalik .card-body {
+  text-align: right;
+}
+
+#mempelai .card-samping .card-body,
+#mempelai .card-samping.kebalik .card-body {
+  text-align: center;
+}
+
+#mempelai .dan {
+  display: block;
+  text-align: center;
+  margin: 0.2rem 0;
+}
+
+#mempelai .ortu {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+/* ===================== LOKASI / SAVE THE DATE ===================== */
+#lokasi h4 {
+  font-family: "Cormorant SC", serif;
+  letter-spacing: 5px;
+  font-size: 1.3rem;
+  color: var(--emas);
+  text-shadow: none;
+}
+
+#lokasi > h3 {
+  font-family: "Cormorant SC", serif;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+#lokasi .card-text:nth-child(2) {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+#lokasi .btn {
+  background-color: var(--emas);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 32px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+#lokasi .btn:hover {
+  background-color: var(--emas-tua);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/*======= GALERI =============*/
+
+#galeri .galeri-landscape img {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* bentuk landscape */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===================== RSVP ===================== */
+#rsvp .form-label {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.3rem;
+}
+
+#rsvp .form-control,
+#rsvp .form-select {
+  border: 1px solid rgba(201, 169, 110, 0.7);
+  border-radius: 12px;
+  background-color: #fffdf9;
+  font-family: sans-serif;
+}
+
+#rsvp .form-control:focus,
+#rsvp .form-select:focus {
+  border-color: var(--emas-tua);
+  box-shadow: 0 0 0 0.2rem rgba(201, 169, 110, 0.3);
+}
+
+.btn-emas {
+  background-color: var(--emas);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 32px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-emas:hover,
+.btn-emas:focus {
+  background-color: var(--emas-tua);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===================== AMPLOP DIGITAL ===================== */
+#amplop .no-rek {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--teks);
+}
+
+#amplop .btn-salin {
+  margin-top: 0.8rem;
+  padding: 8px 24px;
+  font-size: 0.9rem;
+}
+
+#amplop .btn-salin.berhasil {
+  background-color: #4f8a5b;
+}
+
+.qris-judul {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  color: var(--emas);
+  margin-bottom: 1rem;
+}
+
+#rsvp .text-danger {
+  color: #ffb3b3 !important;   /* pesan error terbaca di latar burgundy */
+}
+
+#qris {
+  width: 260px;
+  max-width: 80%;
+  padding: 12px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* ===================== ANIMASI SAAT DI-SCROLL ===================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.dari-kiri  { transform: translateX(-60px); }
+.reveal.dari-kanan { transform: translateX(60px); }
+.reveal.zoom       { transform: scale(0.85); }
+
+.reveal.terlihat {
+  opacity: 1;
+  transform: none;
+}
+
+/* galeri */
+#galeri img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* penutup */
+#penutup {
+  padding-bottom: 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ===================== TOMBOL MUTE (DISK) ===================== */
+#btnMute {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 15px;
+  right: 15px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.disk {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #f5f5f5 0 7%, #c9a96e 7% 26%, #111 26% 100%),
+    repeating-radial-gradient(circle, #111 0 2px, #2a2a2a 2px 4px);
+  animation: putar 4s linear infinite;
+}
+
+#btnMute.mati .disk {
+  animation-play-state: paused;
+  opacity: 0.5;
+}
+
+@keyframes putar {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* laptop */
+@media (max-width: 950px) {
+  .hero h1 { font-size: 2.5rem; }
+  .hero p  { font-size: 1.4rem; }
+  #undangan h2 { font-size: 3rem; }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p  { font-size: 1.2rem; }
+  #undangan h2 { font-size: 2.5rem; }
+}
+
+/* handphone */
+@media (max-width: 576px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero h5 { font-size: 2rem; }
+  .hero h4 { font-size: 1.2rem; }
+  .hero p  { font-size: 1.1rem; }
+
+  #undangan h2 { font-size: 2rem; }
+  #undangan h5 { font-size: 2.2rem; }
+
+  #mempelai .card-samping {
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  #mempelai .card-img-top {
+    width: 115px;
+    height: 155px;
+    border-radius: 58px 58px 0 0;
+  }
+
+  #mempelai .card-title {
+    font-size: 1.2rem;
+  }
+
+  #mempelai .card-text {
+    font-size: 0.95rem;
+  }
+
+  #lokasi > h3 { font-size: 1.6rem; }
+
+  .hero .sampul-bawah h4 { font-size: 1.2rem; }
+  .hero .sampul-bawah h5 { font-size: 1.2rem; }
+  .hero .sampul-bawah p  { font-size: 1.4rem; }
+}
