@@ -7,6 +7,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
@@ -16,7 +18,7 @@
   <body>
 
     <!-- 1. SAMPUL -->
-    <section id="hero" class="hero w-100 p-3 d-flex justify-content-center text-center text-white">
+    <section id="hero" class="hero vh-100 w-100 p-3 d-flex justify-content-center text-center text-white">
       <main class="sampul-isi">
 
         <div class="sampul-atas">
@@ -37,11 +39,34 @@
     <!-- ISI UNDANGAN -->
     <section id="undangan" class="d-none py-5 text-center">
       <div class="container">
+        <div id="bingkai" class="reveal zoom">
+          <div class="bingkai-isi">
+            <p class="bingkai-kecil reveal d1">The Wedding Of</p>
+            <h2 class="reveal d2">Aulia</h2>
+            <span class="bingkai-dan reveal d3">&amp;</span>
+            <h2 class="reveal d4">Fardin</h2>
+            <p class="bingkai-tanggal reveal d5">07 . 12 . 2026</p>
+          </div>
+        </div>
+
+        <hr class="garis my-5">
+
         <div id="pembuka">
           <h5 class="reveal">The Wedding Of</h5>
           <img src="img/Foto3.jpg" alt="Nama &amp; Nama" class="img-fluid my-4 reveal zoom">
           <h2 class="reveal">Aulia &amp; Fardin</h2>
           <p class="mt-4 reveal">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
+        </div>
+
+        <hr class="garis my-5">
+
+        <!-- [TAMBAHAN] Ayat -->
+        <div id="ayat" class="reveal">
+          <div class="kartu-krem">
+            <p class="ayat-inisial">A <span>&amp;</span> F</p>
+            <p class="ayat-teks">&ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.&rdquo;</p>
+            <p class="ayat-sumber">QS. Ar-Rum: 21</p>
+          </div>
         </div>
 
         <hr class="garis my-5">
@@ -52,12 +77,11 @@
           <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8 reveal dari-kiri">
               <div class="card card-samping mb-4">
-                <img id="mempelai1" src="img/MempelaiP.JPG" class="card-img-top" alt="Nama Mempelai 1">
+                <img id="mempelai1" src="img/MempelaiP.jpg" class="card-img-top" alt="Nama Mempelai 1">
                 <div class="card-body">
                   <h5 class="card-title">Aulia Pratiwi</h5>
                   <p class="card-text">Putri dari <span class="ortu">Bapak  Alm. M.zakir, A. Md</span> 
                     <span class="dan">&amp;</span>Ibu Irawati Azis Kasua</p>
-                </div>
               </div>
             </div>
             <div class="col-12 col-md-10 col-lg-8 reveal dari-kanan">
@@ -70,6 +94,19 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <hr class="garis my-5">
+
+        <!-- Hitung mundur -->
+        <div id="hitung" class="reveal zoom">
+          <p class="hitung-judul">Menuju Hari Bahagia</p>
+          <div class="hitung-kotak">
+            <div><span id="cdHari">0</span><small>Hari</small></div>
+            <div><span id="cdJam">0</span><small>Jam</small></div>
+            <div><span id="cdMenit">0</span><small>Menit</small></div>
+            <div><span id="cdDetik">0</span><small>Detik</small></div>
           </div>
         </div>
 
@@ -159,7 +196,7 @@
           <p class="reveal">Doa restu Anda adalah hadiah terbaik bagi kami. Namun jika ingin memberikan tanda kasih, dapat melalui:</p>
 
           <div class="row justify-content-center">
-            <div class="col-12 col-md-6 col-lg-5 reveal dari-kiri">
+            <div class="col-12 col-md-8 col-lg-5 reveal zoom">
               <div class="card mb-4">
                 <div class="card-body">
                   <h5 class="card-title">Bank BSI</h5>

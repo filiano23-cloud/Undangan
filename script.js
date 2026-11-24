@@ -6,8 +6,8 @@ const btnBuka  = document.getElementById('btnBuka');
 const btnMute  = document.getElementById('btnMute');
 
 // ===== Pengaturan lagu =====
-lagu.loop   = true;   // diulang terus
-lagu.volume = 0.3;    // 0 sampai 1
+lagu.loop   = true;  
+lagu.volume = 0.4;
 
 // ===== Nama tamu dari link: index.html?to=Budi+Santoso =====
 const nama = new URLSearchParams(window.location.search).get('to');
@@ -17,22 +17,19 @@ if (nama) {
 
 // ===== Buka undangan: sampul memudar, isi muncul =====
 btnBuka.addEventListener('click', function () {
-  lagu.play().catch(function () {});     // abaikan error jika file lagu tidak ada
+  lagu.play().catch(function () {});  
   btnMute.classList.remove('d-none');
 
-  // isi undangan disiapkan di bawah sampul
   undangan.classList.remove('d-none');
   window.scrollTo(0, 0);
 
-  // jeda satu frame agar transisi sempat berjalan
   requestAnimationFrame(function () {
     requestAnimationFrame(function () {
-      hero.classList.add('keluar');      // sampul meluncur ke atas
-      undangan.classList.add('tampil');  // isi memudar masuk
+      hero.classList.add('keluar');    
+      undangan.classList.add('tampil');  
     });
   });
 
-  // sembunyikan sampul setelah selesai meluncur (1s, sama dengan CSS)
   setTimeout(function () {
     hero.classList.add('d-none');
   }, 1000);
@@ -52,7 +49,7 @@ if ('IntersectionObserver' in window) {
     daftar.forEach(function (item) {
       if (item.isIntersecting) {
         item.target.classList.add('terlihat');
-        pengamat.unobserve(item.target);   // animasi sekali saja
+        pengamat.unobserve(item.target);
       }
     });
   }, { threshold: 0.15 });
@@ -63,8 +60,7 @@ if ('IntersectionObserver' in window) {
   elemenReveal.forEach(function (el) { el.classList.add('terlihat'); });
 }
 
-// ===== RSVP: kirim lewat WhatsApp =====
-const NOMOR_WA = '6281234567890';   // GANTI dengan nomor WhatsApp penerima (kode negara, tanpa + dan tanpa 0 di depan)
+const NOMOR_WA = '6285943768517'; 
 
 const formRsvp = document.getElementById('formRsvp');
 const rsvpNama = document.getElementById('rsvpNama');
@@ -110,7 +106,7 @@ document.querySelectorAll('.btn-salin').forEach(function (tombol) {
       }, 2000);
     }
 
-    function cadangan() {   // untuk browser/koneksi yang tidak mendukung clipboard API
+    function cadangan() {   
       const t = document.createElement('textarea');
       t.value = teks;
       t.style.position = 'fixed';
@@ -128,3 +124,25 @@ document.querySelectorAll('.btn-salin').forEach(function (tombol) {
     }
   });
 });
+
+// ===== [TAMBAHAN] Hitung mundur =====
+// Acara: 7 Desember 2026, pukul 10.00 WIB (+07:00). Ubah tanggal di bawah jika perlu.
+const targetAcara = new Date('2026-12-07T10:00:00+08:00').getTime();
+const cdHari  = document.getElementById('cdHari');
+const cdJam   = document.getElementById('cdJam');
+const cdMenit = document.getElementById('cdMenit');
+const cdDetik = document.getElementById('cdDetik');
+
+function hitungMundur() {
+  let selisih = Math.max(0, targetAcara - Date.now());
+  const detik = Math.floor(selisih / 1000);
+  cdHari.textContent  = Math.floor(detik / 86400);
+  cdJam.textContent   = Math.floor((detik % 86400) / 3600);
+  cdMenit.textContent = Math.floor((detik % 3600) / 60);
+  cdDetik.textContent = detik % 60;
+}
+
+if (cdHari && cdJam && cdMenit && cdDetik) {
+  hitungMundur();
+  setInterval(hitungMundur, 1000);
+}
