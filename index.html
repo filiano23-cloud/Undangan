@@ -37,35 +37,38 @@
     </section>
 
     <!-- ISI UNDANGAN -->
-    <section id="undangan" class="d-none py-5 text-center">
+    <section id="undangan" class="d-none pt-3 pb-5 text-center">
       <div class="container">
-        <div id="bingkai" class="reveal zoom">
-          <div class="bingkai-isi">
-            <p class="bingkai-kecil reveal d1">The Wedding Of</p>
-            <h2 class="reveal d2">Aulia</h2>
-            <span class="bingkai-dan reveal d3">&amp;</span>
-            <h2 class="reveal d4">Fardin</h2>
-            <p class="bingkai-tanggal reveal d5">07 . 12 . 2026</p>
-          </div>
-        </div>
 
-        <hr class="garis my-5">
-
+        <!-- PEMBUKA (foto setengah oval) -->
         <div id="pembuka">
           <h5 class="reveal">The Wedding Of</h5>
-          <img src="img/Foto3.jpg" alt="Nama &amp; Nama" class="img-fluid my-4 reveal zoom">
+          <img src="img/Undangan.jpg" alt="Aulia &amp; Fardin" class="img-fluid my-4 reveal zoom">
           <h2 class="reveal">Aulia &amp; Fardin</h2>
+          <p class="tanggal-awal reveal">07 . 12 . 2026</p>
           <p class="mt-4 reveal">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
         </div>
 
         <hr class="garis my-5">
 
-        <!-- [TAMBAHAN] Ayat -->
+        <!-- AYAT + HITUNG MUNDUR (1 frame, latar foto) -->
         <div id="ayat" class="reveal">
           <div class="kartu-krem">
             <p class="ayat-inisial">A <span>&amp;</span> F</p>
             <p class="ayat-teks">&ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.&rdquo;</p>
             <p class="ayat-sumber">QS. Ar-Rum: 21</p>
+
+            <hr class="garis my-4">
+
+            <div id="hitung">
+              <p class="hitung-judul">Menuju Hari Bahagia</p>
+              <div class="hitung-kotak">
+                <div><span id="cdHari">0</span><small>Hari</small></div>
+                <div><span id="cdJam">0</span><small>Jam</small></div>
+                <div><span id="cdMenit">0</span><small>Menit</small></div>
+                <div><span id="cdDetik">0</span><small>Detik</small></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -73,15 +76,16 @@
 
         <!-- 3. MEMPELAI -->
         <div id="mempelai" class="mt-5">
-          <h3 class="reveal mb-4">Mempelai</h3>
+          <h3 class="reveal mb-4">The Bride &amp; Groom</h3>
           <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8 reveal dari-kiri">
               <div class="card card-samping mb-4">
                 <img id="mempelai1" src="img/MempelaiP.JPG" class="card-img-top" alt="Nama Mempelai 1">
                 <div class="card-body">
                   <h5 class="card-title">Aulia Pratiwi</h5>
-                  <p class="card-text">Putri dari <span class="ortu">Bapak  Alm. M.zakir, A. Md</span> 
+                  <p class="card-text">Putri dari <span class="ortu">Bapak  Alm. M.zakir neng Talattaf, A. Md</span>
                     <span class="dan">&amp;</span>Ibu Irawati Azis Kasua</p>
+                </div>
               </div>
             </div>
             <div class="col-12 col-md-10 col-lg-8 reveal dari-kanan">
@@ -99,19 +103,6 @@
 
         <hr class="garis my-5">
 
-        <!-- Hitung mundur -->
-        <div id="hitung" class="reveal zoom">
-          <p class="hitung-judul">Menuju Hari Bahagia</p>
-          <div class="hitung-kotak">
-            <div><span id="cdHari">0</span><small>Hari</small></div>
-            <div><span id="cdJam">0</span><small>Jam</small></div>
-            <div><span id="cdMenit">0</span><small>Menit</small></div>
-            <div><span id="cdDetik">0</span><small>Detik</small></div>
-          </div>
-        </div>
-
-        <hr class="garis my-5">
-
         <!-- 4. ACARA & LOKASI -->
         <div id="lokasi" class="mt-5">
           <h4 class="reveal">SAVE THE DATE</h4>
@@ -121,7 +112,7 @@
               <div class="card mb-4">
                 <div class="card-body">
                   <h5 class="card-title">Akad Nikah</h5>
-                  <p class="card-text">Pukul 10.00 WIB</p>
+                  <p class="card-text">Pukul 10.00 WITA</p>
                   <p class="card-text">(KEDIAMAN MEMPELAI WANITA)</p>
                   <p class="card-text">Jalan Kelapa No. 61 A, Kota Palopo</p>
                 </div>
@@ -131,7 +122,7 @@
               <div class="card mb-4">
                 <div class="card-body">
                   <h5 class="card-title">Resepsi</h5>
-                  <p class="card-text">Pukul 12.00 WIB</p>
+                  <p class="card-text">Pukul 11.00 WITA</p>
                   <p class="card-text">(KEDIAMAN MEMPELAI WANITA)</p>
                   <p class="card-text">Jalan Kelapa No. 61 A, Kota Palopo</p>
                 </div>
@@ -147,11 +138,11 @@
         <div id="galeri" class="mt-5">
           <h3 class="reveal mb-4">Galeri</h3>
           <div class="row g-3 justify-content-center">
-            <div class="col-6 col-md-4 reveal zoom"><img src="img/Foto1.jpg" alt="Galeri 1"></div>
-            <div class="col-6 col-md-4 reveal zoom"><img src="img/Foto4.jpg" alt="Galeri 2"></div>
-            <div class="col-12 reveal zoom galeri-landscape"><img src="img/Foto11.JPG" alt="Galeri 3"></div>
-            <div class="col-6 col-md-4 reveal zoom"><img src="img/Foto5.jpg" alt="Galeri 4"></div>
-            <div class="col-6 col-md-4 reveal zoom"><img src="img/Foto12.JPG" alt="Galeri 5"></div>
+            <div class="col-6 col-md-4 reveal zoom"><img src="img/Galeri1.jpg" alt="Galeri 1"></div>
+            <div class="col-6 col-md-4 reveal zoom"><img src="img/Galeri2.jpg" alt="Galeri 2"></div>
+            <div class="col-12 reveal zoom galeri-landscape"><img src="img/Galeri3.JPG" alt="Galeri 3"></div>
+            <div class="col-6 col-md-4 reveal zoom"><img src="img/Galeri4.jpg" alt="Galeri 4"></div>
+            <div class="col-6 col-md-4 reveal zoom"><img src="img/Galeri5.JPG" alt="Galeri 5"></div>
           </div>
         </div>
 
@@ -210,7 +201,7 @@
 
           <div class="reveal zoom mt-2">
             <h5 class="card-title qris-judul">QRIS</h5>
-            <img id="qris" src="img/qris.png" alt="QRIS" class="img-fluid">
+            <img id="qris" src="img/Qris.jpeg" alt="QRIS" class="img-fluid">
             <p class="small mt-2">Scan dengan aplikasi bank atau e-wallet</p>
           </div>
         </div>

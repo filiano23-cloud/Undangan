@@ -14,7 +14,7 @@ body {
 
 /* ===================== SAMPUL ===================== */
 .hero {
-  position: fixed;          /* menutupi layar, di atas isi undangan */
+  position: fixed;  
   top: 0;
   left: 0;
   height: 100vh;
@@ -28,9 +28,9 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/Foto13.jpg") center / cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/Sampul.jpg") center / cover no-repeat;
   z-index: -1;
-  filter: grayscale(1) blur(1.5px);
+  filter: grayscale(1) blur(1px);
 }
 
 .hero.keluar {
@@ -44,7 +44,7 @@ body {
   height: 100%;
   padding: 30px 0 60px;
   padding-bottom: calc(40px + env(safe-area-inset-bottom));
-}  
+}
 
 .hero h1 {
   font-family: "Sacramento", cursive;
@@ -89,21 +89,19 @@ body {
   transform: translateY(-2px);
 }
 
-/* ukuran teks sampul bawah */
 .hero .sampul-bawah h4 {
-  font-size: 1.5rem;     /* "Kepada Yth." */
+  font-size: 1.5rem;    
 }
 
 .hero .sampul-bawah h5 {
-  font-size: 1.5rem;     /* "Bapak/Ibu/Saudara/i" */
+  font-size: 1.5rem;     
 }
-
 .hero .sampul-bawah p {
-  font-size: 1.8rem;     /* nama tamu */
+  font-size: 1.8rem;    
 }
 
 .hero .sampul-bawah .btn {
-  font-size: 1rem;       /* tombol */
+  font-size: 1rem;      
   padding: 8px 26px;
 }
 
@@ -120,7 +118,7 @@ body {
 }
 
 #pembuka img {
-  width: min(168px, 53vw);
+  width: min(210px, 53vw);
   max-width: none;
   height: auto;
   aspect-ratio: 1 / 2;
@@ -129,7 +127,24 @@ body {
   border-radius: 999px 999px 0 0;
   outline: auto;
   outline-color: white;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55), 0 0 18px rgba(201, 169, 110, 0.25);
+}
+
+#undangan #pembuka h2 {
+  font-size: clamp(3.2rem, 12vw, 4.7rem);
+  line-height: 1.1;
+}
+
+#undangan #pembuka p {
+  font-size: 1.45rem;
+  line-height: 1.6;
+}
+
+#undangan #pembuka .tanggal-awal {
+  margin: 0.4rem 0 0;
+  font-size: 1.6rem;
+  letter-spacing: 5px;
+  color: var(--emas);
 }
 
 #undangan h5 {
@@ -166,7 +181,7 @@ body {
 
 /* ===================== KARTU (mempelai & acara) ===================== */
 #undangan .card {
-  color: var(--teks); 
+  color: var(--teks);
   background-color: #fffdf9;
   border: 1px solid rgba(201, 169, 110, 0.5);
   border-radius: 20px;
@@ -200,6 +215,15 @@ body {
 }
 
 /* ===================== MEMPELAI ===================== */
+#mempelai > h3 {
+  font-size: 2.4rem;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 576px) {
+  #mempelai > h3 { font-size: 1.8rem; letter-spacing: 3px; }
+}
+
 #mempelai .card-samping {
   flex-direction: row;
   align-items: center;
@@ -394,7 +418,6 @@ body {
   transform: none;
 }
 
-/* galeri */
 #galeri img {
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -403,7 +426,6 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
-/* penutup */
 #penutup {
   padding-bottom: 4rem;
 }
@@ -416,81 +438,53 @@ body {
   }
 }
 
-/* ===================== [TAMBAHAN] SEPERTI CONTOH VIDEO ===================== */
-
-/* jeda animasi bertahap (dipakai bersama class .reveal) */
+/* ===================== AYAT + HITUNG MUNDUR ===================== */
 .reveal.d1 { transition-delay: 0.3s; }
 .reveal.d2 { transition-delay: 0.6s; }
 .reveal.d3 { transition-delay: 0.9s; }
 .reveal.d4 { transition-delay: 1.2s; }
 .reveal.d5 { transition-delay: 1.5s; }
 
-/* bingkai judul bentuk lengkung */
-#bingkai {
-  width: min(340px, 88vw);
-  margin: 0 auto;
-  padding: 12px;
-  border: 2px solid var(--emas);
-  border-radius: 999px 999px 0 0;
-}
-
-#bingkai .bingkai-isi {
-  border: 1px solid rgba(201, 169, 110, 0.6);
-  border-radius: 999px 999px 0 0;
-  padding: 90px 16px 50px;
-}
-
-#bingkai h2 {
-  margin: 0;
-  font-size: 3.2rem;
-}
-
-#bingkai .bingkai-kecil {
-  letter-spacing: 4px;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-
-#bingkai .bingkai-dan {
-  display: block;
-  font-family: "Sacramento", cursive;
-  font-size: 2.2rem;
-  color: var(--emas);
-}
-
-#bingkai .bingkai-tanggal {
-  margin: 1.2rem 0 0;
-  letter-spacing: 4px;
-}
-
-/* kartu krem (dipakai bagian ayat) */
 .kartu-krem {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   max-width: 520px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  background: #fffdf9;
-  color: var(--teks);
+  color: var(--krem);
   border: 1px solid rgba(201, 169, 110, 0.6);
   border-radius: 24px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
-#undangan .kartu-krem h3,
-#undangan .kartu-krem p {
-  color: var(--teks);
-  text-shadow: none;
+.kartu-krem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.6)),
+    url("img/Kartu.jpg") center / cover no-repeat;
+    filter: grayscale(0.5) blur(1px);
 }
 
-#undangan .kartu-krem h3 {
-  color: var(--emas-tua);
-  font-size: 1.8rem;
+
+#undangan .kartu-krem h3,
+#undangan .kartu-krem p {
+  color: var(--krem);
+  text-shadow: var(--shadow);
+}
+
+#undangan .kartu-krem .ayat-inisial,
+#undangan .kartu-krem .ayat-sumber {
+  color: var(--emas);
 }
 
 #ayat .ayat-inisial {
   font-family: "Sacramento", cursive;
   font-size: 3rem;
   line-height: 1;
-  color: var(--emas-tua);
 }
 
 #ayat .ayat-inisial span {
@@ -506,36 +500,6 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 0;
-}
-
-.btn-ig {
-  display: inline-block;
-  margin-top: 0.7rem;
-  padding: 6px 18px;
-  background: var(--emas);
-  color: #fff;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-ig:hover {
-  background: var(--emas-tua);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-#hitung {
-  max-width: 560px;
-  margin: 0 auto;
-  padding: 2.5rem 1rem;
-  border-radius: 24px;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("img/Foto9.JPG") center / cover no-repeat;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 #hitung .hitung-judul {
@@ -569,7 +533,6 @@ body {
 }
 
 @media (max-width: 576px) {
-  #bingkai h2 { font-size: 2.6rem; }
   #hitung .hitung-kotak div { min-width: 56px; }
   #hitung .hitung-kotak span { font-size: 1.5rem; }
 }
